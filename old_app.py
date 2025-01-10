@@ -1,3 +1,4 @@
+# Con la refactorizacion este fichero no vale para nada
 # https://code.visualstudio.com/docs/python/tutorial-flask
 import re
 from datetime import datetime
@@ -9,7 +10,7 @@ from flask import render_template
 app = Flask(__name__)
 
 
-# Replace the existing home function with the one below
+# Replace the existing home function with the one below   
 """    
 @app.route("/")
 def home():
