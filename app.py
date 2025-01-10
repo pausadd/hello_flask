@@ -23,6 +23,11 @@ def hello_there(name = None):
         name=name,
         date=datetime.now()
     )
-#"""C:\Users\Pablo\Python_development\hello_flask\hello_there.html""",
+
+# serve static file in code
+# usado para api's
+@app.route("/api/data")
+def get_data():
+    return app.send_static_file("data.json")
         
 # "C:\Users\Pablo\OneDrive\Pictures\foto Pim Pum Salamanca.jpg"
