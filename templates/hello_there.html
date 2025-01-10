@@ -1,14 +1,21 @@
+<!-- Jinja template, flask utiliza jinja por defecto -->
 <!DOCTYPE html>
 <html>
+    <!-- si quiero utilizar una css para presentar esto -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='site.css')}}" />
     <head>
         <meta charset="utf-8" />
         <title>Hello, Flask</title>
     </head>
-    <body>
-        {%if name %}
-            <strong>Hello there, {{ name }}!</strong> It's {{ date.strftime("%A, %d %B, %Y at %X") }}.
+    <body>{%if name %}
+        <!-- con span uso el style 'message' definido en la css 
+        The <span> tag is an inline container used to mark up a part of a text, or a part of a document.
+        The <span> tag is easily styled by CSS or manipulated with JavaScript using the class or id attribute. 
+        -->
+        <span class="message">Hello there, {{ name }}!</span> It's {{ date.strftime("%A, %d %B, %Y at %X") }}.
         {% else %}
-            What's your name? Provide it after /hello/ in the URL.
+            <span class="message">What's your name? Provide it after /hello/ in the URL.</span>
         {% endif %}
+
     </body>
 </html>
